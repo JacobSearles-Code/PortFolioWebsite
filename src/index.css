@@ -9,7 +9,6 @@
 
 html {
     background: var(--SECONDARY);
-    overflow: hidden;
 }
 
 .sidebar {

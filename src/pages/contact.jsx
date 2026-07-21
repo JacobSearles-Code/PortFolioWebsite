@@ -24,6 +24,7 @@ const Contacts = () => {
 
     return (
         <div className="contactDiv">
+            <title>Contact Me</title>
             <h1>Contact Me!</h1>
             <form onSubmit={sendEmail} className="contactForm">
                 <label>Name: <input type="text" onChange={(e) => setName(e.target.value)} required/> </label>

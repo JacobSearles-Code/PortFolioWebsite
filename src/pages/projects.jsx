@@ -4,6 +4,7 @@ const Projects = () => {
 
     return (
         <div className="projectsDiv">
+            <title>Projects</title>
             <h1>Previous Projects I've Worked on</h1>
             <div className="displayDiv">
                 {PrevProjects.map((projects) => (
