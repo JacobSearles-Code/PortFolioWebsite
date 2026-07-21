@@ -1,0 +1,506 @@
+
+:root {
+    --PRIMARY: #8a6247;
+    --PRIMARY-DARK: #6d4d39;
+    --SECONDARY: #f6efe7;
+    --TEXT: #3b312b;
+}
+
+
+html {
+    background: var(--SECONDARY);
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100vh;
+    background: #967259;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    rotate: -90deg;
+    position: absolute;
+    transform: translatex(7%);
+}
+
+.sidebar a {
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.landingDiv {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 100vh;
+
+    padding-left: 180px;
+    padding-right: 120px;
+
+    overflow: hidden;
+}
+
+.landingDiv::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 40%;
+    height: 100%;
+
+    background: var(--SECONDARY);
+
+    z-index: -1;
+}
+
+.heroButton {
+    margin-top: 1.5rem;
+    padding: 14px 32px;
+
+    background: var(--PRIMARY);
+    color: white;
+
+    border: none;
+    border-radius: 999px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+            background 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+
+    box-shadow: 0 8px 20px rgba(150, 114, 89, 0.25);
+}
+
+.heroButton:hover {
+    background: #7d5d47;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(150, 114, 89, 0.35);
+}
+
+.heroButton:active {
+    transform: translateY(-1px);
+}
+
+.landingContent {
+    width: 35%;
+}
+
+.landingContent h1 {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+}
+
+.landingContent h2 {
+    color: var(--PRIMARY);
+    margin-bottom: 1rem;
+}
+
+.landingContent p {
+    line-height: 1.7;
+    color: #666;
+}
+
+.heroRight {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+
+    max-width: 1300px;
+
+    margin: 70px auto;
+    padding: 0 50px;
+}
+
+.logoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-decoration: none;
+    color: #2f2f2f;
+
+    box-shadow:
+            0 6px 20px rgba(0,0,0,.08);
+
+    transition:
+            transform .3s,
+            box-shadow .3s;
+
+    padding: 0;
+}
+
+.logoCard:hover {
+    transform: translateY(-8px);
+    box-shadow:
+            0 20px 40px rgba(0,0,0,.15);
+}
+
+.projectsDiv h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.logoCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.projectName {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.contactDiv {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.contactDiv h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactForm label {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.contactForm textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contactForm button {
+    align-self: center;
+    padding: 0.8rem 2rem;
+    background: var(--PRIMARY);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.contactForm button:hover {
+    background: var(--PRIMARY-DARK);
+}
+
+.contactForm p {
+    text-align: center;
+}
+
+.projectsDiv h1 {
+    margin-top: 70px;
+    margin-bottom: 10px;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    color: #4f3b2d;
+}
+
+.contactDiv {
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+            0 12px 35px rgba(0,0,0,.08);
+
+    padding: 3rem;
+}
+
+.codeWindow {
+    width: 500px;
+
+    background: #1e1e1e;
+    color: #d4d4d4;
+
+    border-radius: 18px;
+
+    padding: 2rem;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.8;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.18);
+
+    white-space: pre-wrap;
+}
+
+.cursor {
+    animation: blink .8s infinite;
+}
+
+@keyframes blink {
+
+    0%,50% {
+        opacity:1;
+    }
+
+    51%,100% {
+        opacity:0;
+    }
+
+}
+
+.keyword {
+    color: #569CD6;
+}
+
+.string {
+    color: #CE9178;
+}
+
+.property {
+    color: #9CDCFE;
+}
+
+.codeWindow {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+.aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    min-height: 80vh;
+    padding: 80px 10%;
+
+    background: #0f0f0f;
+    color: white;
+}
+
+/* Left side */
+.aboutImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Right side */
+.aboutContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.aboutContent h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+
+    color: #22c55e;
+}
+
+.aboutContent h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.aboutContent p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cccccc;
+}
+
+
+/* Skill badges */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 80vh;
+    padding: 80px 8%;
+
+    background: #f6efe7;
+    color: #2b211b;
+
+    gap: 60px;
+}
+
+
+/* Left image */
+.aboutImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImage img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+    border-radius: 20px;
+
+    border: 4px solid #8a6247;
+}
+
+
+/* Right content */
+.aboutContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.aboutContent h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    color: #8a6247;
+
+    margin-bottom: 15px;
+}
+
+.aboutContent h2 {
+    font-size: 2rem;
+    color: #2b211b;
+
+    margin-bottom: 20px;
+}
+
+.aboutContent p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+
+    color: #5c4a3d;
+}
+
+
+/* Skill badges */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.skills span {
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    background: transparent;
+    border: 2px solid #8a6247;
+
+    color: #8a6247;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.skills span:hover {
+    background: #8a6247;
+    color: #f6efe7;
+}
+
+@media (max-width: 900px) {
+
+    .landingDiv {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 30px;
+        gap: 50px;
+    }
+
+    .landingDiv::before {
+        width: 100%;
+        height: 50%;
+    }
+
+    .landingContent,
+    .heroRight {
+        width: 100%;
+    }
+
+}
